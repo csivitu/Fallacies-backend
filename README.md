@@ -1,26 +1,14 @@
-[![csivit][csivitu-shield]][csivitu-url]
-[![Issues][issues-shield]][issues-url]
+[![csivit][csivitu-shield]](https://github.com/csivitu)
+[![Issues][issues-shield]](https://github.com/csivitu/Fallacies-Backend/issues)
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo">
-    <img src="https://csivit.com/images/favicon.png" alt="Logo" width="80">
+  <a href="https://github.com/csivitu/Fallacies-Backend">
+      <img src="./aligned.png" alt="Logo" width="200">
   </a>
-
-  <h3 align="center">YOUR_TITLE</h3>
-
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
-    <br />
-    <a href="https://github.com/csivitu/repo"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/csivitu/repo">View Demo</a>
-    ·
-    <a href="https://github.com/csivitu/repo/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/csivitu/repo/issues">Request Feature</a>
+    An online cryiptic hunt event based on conspiracy theories around the world
   </p>
 </p>
 
@@ -45,18 +33,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo`, `twitter_handle`, `email`
+Fallacies was an event where players scavenge for clues through mysterious instagram profiles and reach on a final answer. The players analyse the posts and stories on the account and enters the final answer on the platform made for the same. This project is the backend for the same platform. We make the user login or signup and the user is then redirected to the answer submissions page where they have to input answer. The server returns the next account if the answer entered by the user is correct otherwise an appropriate error message is returned. 
+
 
 
 ### Built With
 
-* []()
-* []()
-* []()
+* [Node js](https://nodejs.org/en/)
+* Using [Express](https://expressjs.com/)
+* and [Mongoose](https://mongoosejs.com/)
 
 
 
@@ -77,7 +63,7 @@ npm install npm@latest -g
  
 1. Clone the repo
 ```sh
-git clone https://github.com/github_username/repo.git
+git clone https://github.com/csivitu/Fallacies-Backend.git
 ```
 2. Install NPM packages
 ```sh
@@ -89,16 +75,17 @@ npm install
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
+<p align="center">
+  <img src="./login.jpg" width="600">
+  <br />
+  <img src="./submissions.jpg" width="600">
+</p>
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/csivitu/Fallacies-Backend/issues) for a list of proposed features (and known issues).
 
 
 
