@@ -4,8 +4,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/csivitu/Fallacies-Backend">
-      <img src="./aligned.png" alt="Logo" width="200">
+  <a href="https://github.com/csivitu/BroBot">
+    <img src="https://csivit.com/images/favicon.png" alt="Logo" width="80">
   </a>
   <p align="center">
     An online cryiptic hunt event based on conspiracy theories around the world
@@ -76,9 +76,9 @@ npm install
 ## Usage
 
 <p align="center">
-  <img src="./login.jpg" width="600">
+  <img src="./resources/login.jpg" width="600">
   <br />
-  <img src="./submissions.jpg" width="600">
+  <img src="./resources/submissions.jpg" width="600">
 </p>
 
 
