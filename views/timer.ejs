@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../static/css/timer.styles.css" />
+        <link rel="shortcut icon" type="image/png" href="../static/img/favicon.png" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+        <title>FALLACIES</title>
+    </head>
+    <body onload="loaded()">
+        <div id="loader"><img src="../static/img/loading.gif" alt="Loading..." class="loading-gif"></div>
+        <div class="container">
+            <a href="https://csivit.com/"><img src="../static/img/CSIDark(saturated).png" alt="CSI LOGO" class="csilogo" /></a>
+        <img src="../static/img/title.png" alt="Fallacies" class="logo" />
+        <div class="timer">
+            <p id="days" class="value"></p>
+            <p id="hours" class="value"></p>
+            <p id="minutes" class="value"></p>
+            <p id="seconds" class="value vlast"></p>
+            <p class="unit">DAYS</p>
+            <p class="unit">HOURS</p>
+            <p class="unit">MINUTES</p>
+            <p class="unit ulast">SECONDS</p>
+        </div>
+        <button class="btn-signout" onclick="logoutAjax()">Log Out</button>
+        </div>
+        
+
+        <script>
+        if(document.getElementById("loader")) document.querySelector(".container").style.display = 'none';
+        function loaded() {
+            document.getElementById("loader").style.display = "none";
+            document.querySelector(".container").style.display = "flex";
+        }
+
+        // Set the date we're counting down to
+        let countDownDate = new Date("June 8, 2020 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        let x = setInterval(function () {
+            let now = new Date().getTime();
+
+            let distance = countDownDate - now;
+
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            function pad(d) {
+            return d < 10 ? "0" + d.toString() : d.toString();
+            }
+
+            document.getElementById("days").innerHTML = pad(days);
+            document.getElementById("hours").innerHTML = pad(hours);
+            document.getElementById("minutes").innerHTML = pad(minutes);
+            document.getElementById("seconds").innerHTML = pad(seconds);
+        }, 1000);
+        </script>
+        <script src="../static/js/logout.js"></script>
+    </body>
+</html>

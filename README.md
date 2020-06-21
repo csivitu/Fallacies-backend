@@ -7,6 +7,8 @@
   <a href="https://github.com/csivitu/BroBot">
     <img src="https://csivit.com/images/favicon.png" alt="Logo" width="80">
   </a>
+  <br />
+  <h3 align="center">Fallacies</h3>
   <p align="center">
     An online cryiptic hunt event based on conspiracy theories around the world
   </p>
@@ -76,9 +78,9 @@ npm install
 ## Usage
 
 <p align="center">
-  <img src="./resources/login.jpg" width="600">
+  <img src="./images/login.jpg" width="600">
   <br />
-  <img src="./resources/submissions.jpg" width="600">
+  <img src="./images/submissions.jpg" width="600">
 </p>
 
 

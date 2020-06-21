@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <title>Fallacies Leaderboard</title>
+  </head>
+  <body>
+    <a href="https://csivit.com/"><img src="../static/img/CSIDark(saturated).png" alt="CSI LOGO" class="csilogo" /></a>
+    <div class="leaderboard">
+      <div class="header">
+        <img src="../static/img/title.png" alt="LOGO" class="logo" />
+      </div>
+
+      <table id="leaderbordTable">
+        <tr>
+          <th>Username</th>
+          <th>Score</th>
+        </tr>
+
+        <% for(let i=0; i<leaderboard.length; i++) { %>
+        <tr>
+
+                   <td><%= leaderboard[i].username%></td>
+                   <td>&emsp; <%= leaderboard[i].points%></td>
+                   
+                </tr>
+                <% } %> 
+      </table>
+      <button class="btn-signout" onclick="logoutAjax()">Log Out</button>
+      <button class="btn-leaderboard" id="submission">SUBMISSION PAGE</button>
+    </div>
+
+    <script src="../static/js/logout.js"></script>
+    <script src="../static/js/leaderboard.js"></script>
+  </body>
+</html>

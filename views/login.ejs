@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../static/css/style.css" />
+        <link rel="shortcut icon" type="image/png" href="../static/img/favicon.png" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+        <title>FALLACIES</title>
+    </head>
+    <body onload="loaded()">
+        <div id="loader"><img src="../static/img/loading.gif" alt="Loading..." class="loading-gif"></div>
+        <a href="https://csivit.com/"><img src="../static/img/CSIDark(saturated).png" alt="CSI LOGO" class="csilogo" /></a>
+        <div class="container">
+        <div class="header">
+            <img src="../static/img/title.png" alt="LOGO" class="logo" />
+            <h2 class="description">What if we told you everything you believe is a lie?</h2>
+        </div>
+        <div class="containerlev2">
+            <form class="login form" id="login-form">
+            <h1 class="heading">request to view files</h1>
+            <div class="form__group form__group--username">
+                <label for="username" class="form__label">Username/Email:</label>
+                <input
+                type="text"
+                class="form__input"
+                id="email"
+                placeholder="username123@xyz.com"
+                required
+                />
+            </div>
+            <div class="form__group form__group--topic">
+                <label for="topic" class="form__label">Topic:</label>
+                <input
+                disabled
+                value="CONSPIRACY THEORIES"
+                type="text"
+                class="form__input"
+                id="topic"
+                required
+                />
+            </div>
+            <div class="form__group form__group--password">
+                <label for="c-password" class="form__label">Password:</label>
+                <input
+                type="password"
+                class="form__input"
+                id="password"
+                placeholder="password123"
+                required
+                />
+            </div>
+            <div class="form__group form__group--fileno">
+                <label for="fileno" class="form__label">File no.</label>
+                <input disabled type="text" class="form__input" id="fileno" />
+            </div>
+            <div class="form__group form__group--approved">
+                <img
+                class="approved"
+                src="../static/img/Approved(straight).png"
+                alt="approved-img"
+                />
+            </div>
+            <div class="form__group captcha">
+                <div class="g-recaptcha" id='captcha' data-callback="onSubmit" data-sitekey="6Lfl1vwUAAAAACDE2jajhP68HxLjc4ytHgDu3_lJ" data-size="invisible"></div>
+            </div>
+            </form>
+        </div>
+
+        <button type="submit" form="login-form" class="btn-submit">LOG IN</button>
+        <h4 class="bottom-line">
+            No account yet? <span><a href="/signup" class="btn-redirect">Sign Up</a> now</span>
+        </h4>
+        <button class="btn-help"><a class="discord-link" href="https://discord.gg/ucZpyrf" target="_blank">Need Help?</a></button>
+        </div>
+        
+        <script>
+        const number = document.getElementById("fileno");
+        let rannum = Math.ceil(Math.random() * 10000000000);
+        number.value = rannum;
+
+        if(document.getElementById("loader")) document.querySelector(".container").style.display = 'none';
+        function loaded() {
+            document.getElementById("loader").style.display = "none";
+            document.querySelector(".container").style.display = "flex";
+        }
+        </script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src="../static/js/alert.js"></script>
+        <script src="../static/js/login.js"></script>
+    </body>
+</html>

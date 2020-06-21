@@ -1,0 +1,272 @@
+@font-face {
+    font-family: "trixie";
+    src: url("../fonts/TrixiePlain.ttf");
+}
+
+@font-face {
+    font-family: "bohemian-typewriter";
+    src: url("../fonts/Bohemian\ Typewriter.ttf");
+}
+
+@font-face {
+    font-family: "cafe";
+    src: url("../fonts/Cafe\ Francoise_D.otf");
+}
+
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+body {
+    box-sizing: border-box;
+    background-image: url(../img/bg.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "bohemian-typewriter";
+    font-size: 1.6rem;
+    color: #000;
+}
+
+#loader {
+    position: absolute;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url(../img/bg.jpeg);
+    background-size: cover;
+    z-index: 99999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-gif {
+    width: 35rem;
+}
+
+.logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 25rem;
+}
+
+.csilogo {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 22rem;
+}
+
+.container {
+    width: 37vw;
+    margin:50px 0;
+    position: relative;
+}
+
+.questionPaper {
+    width: 100%;
+    z-index: 1;
+}
+
+/* .conspiracyNumber {
+    font-size: 2rem;
+    position: absolute;
+    z-index: 2;
+    top: 10rem;
+    right: 8rem;
+} */
+
+.game-form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60%;
+    z-index: 2;
+}
+
+.form__group {
+    width: 100%;
+    text-align: center;
+}
+
+.form__group > * {
+    margin-bottom: 3rem;
+}
+
+.btn-submit {
+    display: inline-block;
+    padding: 5px;
+    background-color: transparent;
+    font-family: 'trixie';
+    width: fit-content;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.btn-submit:hover {
+    transform: scale(1.1);
+}
+
+.btn-submit:active {
+    transform: scale(1);
+}
+
+input {
+    background: transparent;
+    width: 85%;
+    height: 4.5rem;
+    font-size: 2.5rem;
+    font-family: 'trixie';
+    padding: 10px;
+}
+
+.btn-signout{
+    position: fixed;
+    margin: 0 auto;
+    bottom: 1rem;
+    left: 2rem;
+
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: "trixie";
+    font-size: 4rem;
+    padding-bottom: 5px;
+    transition: all 0.2s;
+}
+
+.btn-leaderboard {
+    position: fixed;
+    margin: 0 auto;
+    bottom: 1rem;
+    right: 2rem;
+
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: "trixie";
+    font-size: 4rem;
+    padding-bottom: 5px;
+    transition: all 0.2s;
+}
+
+.btn-signout:hover,
+.btn-leaderboard:hover {
+    transform: scale(1.1);
+}
+
+.btn-signout:active,
+.btn-leaderboard:active {
+    transform: scale(1);
+}
+
+.btn-signout:disabled,
+.btn-leaderboard:disabled {
+    color: rgba(0,0,0, .5);
+    cursor: url('../img/cursor.png'), auto;
+}
+
+.alert--error{
+    color: #f00;
+}
+
+.alert--success {
+    color: #008000;
+}
+
+/* .btn-qp {
+    font-family: 'trixie';
+    position: absolute;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: none;
+    transform: rotateZ(90deg);
+    font-size: 2.5rem;
+    z-index: 2;
+}
+
+.btn-question {
+    bottom: 8rem;
+    right: -2rem;
+}
+
+.btn-leaderboard {
+    bottom: 25rem;
+    right: -3rem;
+} */
+
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .container {
+        width: 55vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 40%;
+    }
+
+    .container {
+        width: 70vw;
+    }
+
+    .csilogo, .logo {
+        width: 22rem;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 75vw;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 85vw;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    html {
+        font-size: 30%;
+    }
+    .container {
+        width: 95vw;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+}

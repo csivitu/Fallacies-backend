@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <title>Fallacies Game Page</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/submissions/submissions" method="POST" class="game" id="game-form">
+            <div class="heading-text">
+                <h1>
+                    Fallacies
+                </h1>
+            </div>
+            <div class="form__group">
+                <input type="text" class="form__input" placeholder="Enter Answer" id="answer" name="answer" required>
+                <label for="answer" class="form__label">Answer</label>
+            </div>
+            <div class="form__group">
+                <h2 class="message"><%= message %></h2>
+            </div>
+            <div class="form__group">
+                <div class="g-recaptcha" id="gg" data-callback="onSubmit" data-sitekey="6Lfl1vwUAAAAACDE2jajhP68HxLjc4ytHgDu3_lJ" data-size="invisible"></div>
+            </div>
+            <div class="form__group btn">
+                <button type="submit" class="btn-submit">Submit &rarr;</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="/static/js/alert.js"></script>
+    <script src="/static/js/submission.js"></script>
+</body>
+</html>
