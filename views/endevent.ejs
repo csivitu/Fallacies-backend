@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../static/css/timer.styles.css" />
+        <link rel="shortcut icon" type="image/png" href="../static/img/favicon.png" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+        <title>FALLACIES</title>
+    </head>
+    <body onload="loaded()">
+        <div id="loader"><img src="../static/img/loading.gif" alt="Loading..." class="loading-gif"></div>
+        <div class="container">
+            <a href="https://csivit.com/"><img src="../static/img/CSIDark(saturated).png" alt="CSI LOGO" class="csilogo" /></a>
+            <img src="../static/img/title.png" alt="Fallacies" class="logo"/>
+        </div>
+        <img src="../static/img/end.gif" alt="The Event has ended. Thank you for playing" class="event-end">
+
+        <script>
+        if(document.getElementById("loader")) document.querySelector(".container").style.display = 'none';
+        function loaded() {
+            document.getElementById("loader").style.display = "none";
+            document.querySelector(".container").style.display = "flex";
+        }
+        </script>
+    </body>
+</html>

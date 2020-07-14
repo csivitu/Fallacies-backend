@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="../static/css/subpage.css" />
+        <link rel="shortcut icon" type="image/png" href="../static/img/favicon.png" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+        <title>FALLACIES</title>
+    </head>
+    <body onload="loaded()">
+        <div id="loader"><img src="../static/img/loading.gif" alt="Loading..." class="loading-gif"></div>
+        <img src="../static/img/CSIDark(saturated).png" alt="CSI LOGO" class="csilogo" />
+        <img src="../static/img/title.png" alt="Fallacies" class="logo" />
+        <div class="container">
+            <img src="../static/img/questions.png" alt="" class="questionPaper">
+            <form class="game-form" id="game-form">
+                <div class="form__group form__group-msg">
+                    <h2 class="message"><%= message %></h2>
+                    <!-- <h3 class="alert"></h3> -->   
+                </div>
+                <div class="form__group form__group-end">
+                    <input type="text" class="form__input" placeholder="Enter Answer" id="answer" required>
+                    <button type="submit" form="game-form" class="btn-submit">Submit</button>
+                </div>
+            </form>
+
+        </div>
+        <button class="btn-signout" onclick="logoutAjax()">Log Out</button>
+        <button class="btn-leaderboard" id="leaderboard">LEADERBOARD</button>
+
+        <script>
+        if(document.getElementById("loader")) document.querySelector(".container").style.display = 'none';
+        function loaded() {
+            document.getElementById("loader").style.display = "none";
+            document.querySelector(".container").style.display = "flex";
+        }
+
+        </script>
+        <script src="../static/js/logout.js"></script>
+        <script src="../static/js/submission.js"></script>
+    </body>
+</html>

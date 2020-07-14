@@ -1,0 +1,344 @@
+@font-face {
+    font-family: "trixie";
+    src: url("../fonts/TrixiePlain.ttf");
+}
+
+@font-face {
+    font-family: "bohemian-typewriter";
+    src: url("../fonts/Bohemian\ Typewriter.ttf");
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+body {
+    background-image: url(../img/bg.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "bohemian-typewriter";
+    font-size: 1.6rem;
+    color: #000;
+    position: relative;
+    text-align: left;
+}
+
+#loader {
+    position: absolute;
+    min-height: 100vh;
+    width: 100vw;
+    background-image: url(../img/bg.jpeg);
+    background-size: cover;
+    z-index: 99999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-gif {
+    width: 35rem;
+}
+
+.csilogo {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 20rem;
+}
+
+.container {
+    min-height: 100vh;
+    width: fit-content;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 1rem;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: auto;
+    width: 25%;
+}
+
+.description {
+    font-size: 3rem;
+    font-family: 'trixie';
+    font-weight: 100;
+    text-align: center;
+}
+
+.innercontainer {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+}
+
+.innercontainer__image {
+    width: 20rem;
+    mix-blend-mode: color-burn;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+
+.innercontainer__button {
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+    border: 2px solid #000;
+    width: 23rem;
+    padding: 2rem 1rem;
+    background: transparent;
+    font-family: "trixie";
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.innercontainer__button:hover:enabled {
+    transform: scale(1.1);
+}
+
+.innercontainer__button:active,
+.innercontainer__button:focus {
+    transform: scale(1);
+}
+
+.innercontainer__button:disabled {
+    color: rgba(0,0,0, .5);
+    border-color: rgba(0,0,0,.5);
+    cursor: url('./cursor.png'), auto;
+}
+
+.innercontainer__button--play {
+    margin-right: 2rem
+}
+
+.btn-signout {
+    position: absolute;
+    margin-right: auto;
+    bottom: 5px;
+    left: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: "trixie";
+    font-size: 4rem;
+    padding-bottom: 5px;
+    transition: all 0.2s;
+    align-self: flex-end;
+}
+
+.btn-signout:hover {
+    transform: scale(1.1);
+}
+
+.btn-signout:active {
+    transform: scale(1);
+}
+
+.btn-signout:disabled {
+    color: rgba(0,0,0, .5);
+    cursor: url('./cursor.png'), auto;
+}
+
+.rulescontainer{
+    width: 50vw;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .description {
+        font-size: 3.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .header {
+        margin-bottom: 7rem;
+    }
+
+    .innercontainer__button {
+        font-size: 2.5rem;
+        width: 20rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .description {
+        font-size: 2.75rem;
+    }
+
+    .innercontainer__image {
+        width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .header {
+        margin-bottom: 10rem;
+    }
+
+    .csilogo {
+        width: 15rem;
+    }
+
+    .description {
+        font-size: 2.25rem;
+    }
+
+    .innercontainer__button {
+        font-size: 2.25rem;
+        width: 18rem;
+    }
+
+    .innercontainer__image {
+        width: 15rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .header {
+        margin-bottom: 6rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .innercontainer__button--play {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .innercontainer__image {
+        width: 25vw;
+    }
+
+    .description {
+        font-size: 3rem;
+    }
+
+    .csilogo {
+        width: 13rem;
+    }
+
+    .innercontainer__button {
+        font-size: 2.5rem;
+        padding: 1rem 1rem;
+    }
+
+    .btn-signout {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .rulescontainer{
+        width: 80vw;
+    }
+
+    html {
+        font-size: 50%;
+    }
+
+    .container {
+        padding-top: 5rem;
+    }
+
+    .logo {
+        width: 60%;
+    }
+
+    .csilogo {
+        width: 15rem;
+    }
+
+    .approved {
+        width: 60%;
+    }
+
+
+    .innercontainer {
+        width: 100%;
+    }
+
+    .innercontainer__button {
+        font-size: 2.5rem;
+        padding: .5rem 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .innercontainer__image {
+        width: 12rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .heading {
+        padding-top: 15px;
+        font-size: 4rem;
+    }
+
+    .description {
+        font-size: 4vw;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 40%;
+    }
+
+    .approved {
+        width: 70%;
+    }
+}
+
